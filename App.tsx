@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+    import React, {ReactNode} from 'react';
+    import { NavigationContainer } from '@react-navigation/native';
+    import { DrawerNavigator } from './src/navigator/DrawerNavigator';
+    import { AuthProvider } from './src/context/AuthContext';
+    import { LoginScreen } from './src/screens/LoginScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    const App = () => {
+        return (
+            <NavigationContainer>
+                <DrawerNavigator/>
+            </NavigationContainer>
+            // <LoginScreen/>
+        );
+    }
+    const AppState = ( { children }: {children: ReactNode} ) => {
+    return(
+        <AuthProvider>
+            { children }
+        </AuthProvider>
+    );
+    }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    export default App;
+    
