@@ -7,7 +7,9 @@
     const App = () => {
         return (
             <NavigationContainer>
+                <AppState>
                 <DrawerNavigator/>
+                </AppState>
             </NavigationContainer>
             // <LoginScreen/>
         );

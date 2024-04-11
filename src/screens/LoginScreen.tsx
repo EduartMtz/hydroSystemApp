@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 50,
-        width: '100%',
+        width: 200,
         borderColor: 'black',
         borderWidth: 2,
         borderRadius: 10,
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: 'black',
         height: 50,
-        width: '100%',
+        width: 100,
         justifyContent: 'center',
         borderRadius: 10,
         marginTop: 20
@@ -162,8 +162,8 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     image: {
-        height:40,
-        width:40
+        height:100,
+        width:100
     },
 
     errorMessage:{
